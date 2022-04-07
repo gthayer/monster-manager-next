@@ -11,35 +11,31 @@ export default function Layout({ children, home }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<div className="header row">
+			<div className="grid grid-cols-2 gap-4">
 
-				<div className="col-sm-6">
-					<h1>
-						<Link href="/">Monster Manager</Link>
-					</h1>
-				</div>
+				<h1>
+					<Link href="/">Monster Manager</Link>
+				</h1>
 
-				<div className="col-sm-6">
-					<ul className="nav nav-tabs nav nav-tabs navbar-right">
-						<li>
-							<Link href="/">Monster List</Link>
-						</li>
-						<li>
-							<Link href="/manager" passHref>
-								<>
-									<a>View Encounter</a>
-									<Image
-										src="/images/wyvern.svg"
-										alt="Monster Manager Logo"
-										width={50}
-										height={50}
-									/>
-									{/* <span>{encounter.length}</span> */}
-								</>
-							</Link>
-						</li>
-					</ul>
-				</div>
+				<ul className="nav nav-tabs nav nav-tabs navbar-right">
+					<li>
+						<Link href="/">Monster List</Link>
+					</li>
+					<li>
+						<Link href="/manager" passHref>
+							<>
+								<a>View Encounter</a>
+								<Image
+									src="/images/wyvern.svg"
+									alt="Monster Manager Logo"
+									width={50}
+									height={50}
+								/>
+								{/* <span>{encounter.length}</span> */}
+							</>
+						</Link>
+					</li>
+				</ul>
 
 			</div>
 	
@@ -47,22 +43,10 @@ export default function Layout({ children, home }) {
 				<main>{children}</main>
 			</main>
 	
-			<footer className={styles.footer}>
-				<div className="footer row">
-
-					<div className="bulilt-with col-sm-4">
-						<p><strong>An interactive Dungeons and Dragons 5e Monster Manual built on React.js.</strong></p>
-					</div>
-
-					<div className="bulilt-with col-sm-4">
-						<p>Some content used under the <a href="http://www.opengamingfoundation.org/ogl.html" target="_blank" title="Open Gaming License" rel="noreferrer">Open Gaming License.</a></p>
-					</div>
-
-					<div className="repo col-sm-4">
-						<p><a href="https://github.com/gthayer/monster-manager" target="_blank" title="Contribute on GitHub" rel="noreferrer">Contribute on GitHub!</a></p>
-					</div>
-
-				</div>
+			<footer className="grid grid-cols-3 gap-4">
+				<p><strong>An interactive Dungeons and Dragons 5e Monster Manual built on React.js.</strong></p>
+				<p>Some content used under the <a href="http://www.opengamingfoundation.org/ogl.html" target="_blank" title="Open Gaming License" rel="noreferrer">Open Gaming License.</a></p>
+				<p><a href="https://github.com/gthayer/monster-manager" target="_blank" title="Contribute on GitHub" rel="noreferrer">Contribute on GitHub!</a></p>
 			</footer>
 	  </div>
 	)
