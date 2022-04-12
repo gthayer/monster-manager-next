@@ -1,8 +1,8 @@
-export default function Action({ action, section }) {
+export default function Action({ action }) {
 	return(
 		<div className="monster-action">
 
-		<h4 className="section-title">{action.name}</h4>
+		<h4 className="text-x font-bold">{action.name}</h4>
 	
 		{ action.desc ? <span className="action-item">{action.desc}</span> : null }
 

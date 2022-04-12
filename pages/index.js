@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Archive from '../components/archive'
 
-import monsters from '../data/monsters';
+import { getMonsters } from '../lib/monsters'
 
-export default function Home() {
+export default function Home({monsters}) {
+  console.log(monsters);
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +16,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-
+        <Archive monsters={monsters} />
       </main>
 
       <footer className={styles.footer}>
@@ -31,4 +33,13 @@ export default function Home() {
       </footer>
     </div>
   )
+}
+
+export async function getStaticProps() {
+	const monsters = getMonsters();
+	return {
+		props: {
+			monsters
+		}
+	};
 }
