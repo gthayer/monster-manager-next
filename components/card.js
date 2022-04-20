@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 export default function card({monster}) {
 	return (
-		<div className="">
+		<div>
 				
-			<h2>
+			<h2 className="font-bold text-2xl text-blue-500">
 				<Link href={`/monsters/${monster.name}`}>
 					<a>{monster.name}</a>
 				</Link>
