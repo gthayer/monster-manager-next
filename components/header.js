@@ -4,7 +4,7 @@ import Filters from "./filters"
 
 export default function Header() {
 	return (
-		<div className="container mx-auto">
+		<div className="container mx-auto pt-10">
 			<div className="grid grid-cols-2 gap-4">
 
 				<h1 className="font-bold text-4xl text-blue-500">

@@ -17,7 +17,7 @@ export default function Monster({ postData }) {
 		<Head>
 			<title>{postData.name} - Monster Manager Listing</title>
 		</Head>
-		<article>
+		<article className="container mx-auto py-10">
 			<div className="monster-general">
 				<h1 className="title">{postData.name}</h1>
 				<p><span className="sub-title">{postData.size} {postData.type} {postData.subtype} - {postData.alignment}</span></p>
