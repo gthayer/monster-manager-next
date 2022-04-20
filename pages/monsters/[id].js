@@ -15,7 +15,7 @@ export default function Monster({ postData }) {
   return (
 	<Layout>
 		<Head>
-			<title>{postData.name}</title>
+			<title>{postData.name} - Monster Manager Listing</title>
 		</Head>
 		<article>
 			<div className="monster-general">
