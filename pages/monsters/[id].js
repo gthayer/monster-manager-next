@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout from '../../components/layout'
 import Action from '../../components/action'
-import { getAllMonsterIds, getMonsterData } from '../../lib/monsters'
+import { getAllMonsterIds, getMonsterData } from '../../lib/helpers'
 
 export default function Monster({ postData }) {
 

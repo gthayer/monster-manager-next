@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { slugifyName } from '../lib/monsters.js';
+import { slugifyName } from '../lib/helpers';
 
 export default function card({monster}) {
 	return (
