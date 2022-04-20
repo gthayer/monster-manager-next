@@ -6,7 +6,7 @@ export default function card({monster}) {
 				
 			<h2>
 				<Link href={`/monsters/${monster.name}`}>
-					{monster.name}
+					<a>{monster.name}</a>
 				</Link>
 			</h2>
 
