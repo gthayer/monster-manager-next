@@ -6,7 +6,6 @@ import Archive from '../components/archive'
 import { getMonsters } from '../lib/monsters'
 
 export default function Home({monsters}) {
-  console.log(monsters);
   return (
     <div className={styles.container}>
       <Head>
