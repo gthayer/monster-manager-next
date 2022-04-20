@@ -2,7 +2,7 @@ import Filter from './filter';
 
 export default function filters() {
 	return (
-		<div className="grid gap-4 grid-cols-2 sm:grid-cols-6">
+		<div className="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 pt-10">
 			<Filter filter="challenge_rating" label="Challenge Rating - Min"/>
 			<Filter filter="challenge_rating" label="Challenge Rating - Max"/>
 			<Filter filter="type" label="Type"/>

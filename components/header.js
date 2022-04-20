@@ -7,11 +7,11 @@ export default function Header() {
 		<div className="container mx-auto">
 			<div className="grid grid-cols-2 gap-4">
 
-				<h1>
+				<h1 className="font-bold text-4xl text-blue-500">
 					<Link href="/">Monster Manager</Link>
 				</h1>
 
-				<ul className="nav nav-tabs nav nav-tabs navbar-right">
+				<ul className="grid grid-cols-2">
 					<li>
 						<Link href="/">Monster List</Link>
 					</li>
@@ -22,8 +22,8 @@ export default function Header() {
 								<Image
 									src="/images/wyvern.svg"
 									alt="Monster Manager Logo"
-									width={50}
-									height={50}
+									width={25}
+									height={25}
 								/>
 								{/* <span>{encounter.length}</span> */}
 							</>
