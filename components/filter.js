@@ -1,4 +1,4 @@
-import {getFilterOptions} from '../lib/helpers';
+import {getFilterOptions, toTitleCase} from '../lib/helpers';
 
 export default function filter({filter, label}) {
 
@@ -9,7 +9,7 @@ export default function filter({filter, label}) {
 			<label className="font-bold block">{label}: </label>
 			<select className="border-2 w-full" name={filter}>
 				<option value="">{label}</option>
-				{options.map((option,i) => <option key={i} value={option}>{option}</option>)}
+				{options.map((option,i) => <option key={i} value={option}>{toTitleCase(option)}</option>)}
 			</select>
 		</div>
 	);
