@@ -1,4 +1,4 @@
-export default function footer() {
+export default function Footer() {
 	return (
 		<footer className="container mx-auto grid grid-cols-3 gap-4 pb-10">
 			<p><strong>An interactive Dungeons and Dragons 5e Monster Manual built on React.js.</strong></p>

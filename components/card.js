@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { slugifyName } from '../lib/helpers';
 
-export default function card({monster}) {
+export default function Card({monster}) {
 	return (
 		<div>
 				
