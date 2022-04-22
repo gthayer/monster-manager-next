@@ -8,7 +8,6 @@ import Footer from '../components/footer'
 import { getMonsters, useMonsters } from '../lib/helpers'
 
 export default function Home({monsters}) {
-  const m = useMonsters().filterMonsters();
   return (
     <div className={styles.container}>
       <Head>
@@ -20,7 +19,7 @@ export default function Home({monsters}) {
       <Header/>
 
       <main className={styles.main}>
-        <Archive monsters={m} />
+        <Archive />
       </main>
 
       <Footer/>
