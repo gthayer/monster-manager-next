@@ -1,12 +1,44 @@
-import {useContext} from 'react';
+import {useState, createContext} from 'react';
 import '../styles/globals.css'
-import { MonstersContext } from '../lib/helpers';
+import {getMonsters, AppContext} from '../lib/helpers';
+
+const Context = createContext();
 
 function MyApp({ Component, pageProps }) {
+
+  const monsters = getMonsters();
+
+  const [filteredMonsters, setFilteredMonsters] = useState(monsters);
+  const [filters, setFilters] = useState({
+    challenge_rating_min: "",
+    challenge_rating_max: "",
+    type: "",
+    size: "",
+    alignment: "",
+    search: "",
+  })
+
+  const context = {
+    filters: filters,
+    updateFilters(filter, value) {
+      setFilters(filters => {
+        filters[filter] = value;
+        context.filterMonsters();
+        return filters;
+      });
+    },
+    filteredMonsters: filteredMonsters,
+    filterMonsters() {
+      setFilteredMonsters(
+        monsters.filter((monster) => monster.size === context.filters.size)
+      );
+    },
+  };
+
   return (
-  <MonstersContext.Provider value={useContext(MonstersContext)}>
+  <AppContext.Provider value={{context}}>
     <Component {...pageProps} />
-  </MonstersContext.Provider>
+  </AppContext.Provider>
   )
 }
 

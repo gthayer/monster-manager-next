@@ -1,14 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from '../components/header'
 import Archive from '../components/archive'
 import Footer from '../components/footer'
 
-import { getMonsters, useMonsters } from '../lib/helpers'
-
-export default function Home({monsters}) {
-  const m = useMonsters().filterMonsters();
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -20,19 +16,10 @@ export default function Home({monsters}) {
       <Header/>
 
       <main className={styles.main}>
-        <Archive monsters={m} />
+        <Archive/>
       </main>
 
       <Footer/>
     </div>
   )
-}
-
-export async function getStaticProps() {
-	const monsters = getMonsters();
-	return {
-		props: {
-			monsters
-		}
-	};
 }
