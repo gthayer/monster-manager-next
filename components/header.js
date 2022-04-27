@@ -30,8 +30,7 @@ export default function Header() {
 						</Link>
 					</li>
 				</ul>
-
-				</div>
+			</div>
 
 			<Filters/>
 		</div>
