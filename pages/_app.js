@@ -1,6 +1,6 @@
 import {useState, createContext} from 'react';
 import '../styles/globals.css'
-import {getMonsters, AppContext} from '../lib/helpers';
+import {getMonsters, AppContext, filterMonsters} from '../lib/helpers';
 
 const Context = createContext();
 
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
     filteredMonsters: filteredMonsters,
     filterMonsters() {
       setFilteredMonsters(
-        monsters.filter((monster) => monster.size === context.filters.size)
+        filterMonsters(filters)
       );
     },
   };
